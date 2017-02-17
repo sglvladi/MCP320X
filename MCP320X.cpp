@@ -47,16 +47,16 @@ MCP320X::~MCP320X(){}
 *		* The ADC value of a given channel (0-VREF -> 0-4095), if a valid channel is given.
 *		* -1 if the channel id is less than 0 or exceeds the pin number for the defined model.
 * ============================================================================================> */
-uint16_t MCP320X::readADC(uint8_t channel)
+int16_t MCP320X::readADC(uint8_t channel)
 {
 	// If an invalid channel is passed, return -1
-	if ((channel > _pinNo) || (channel < 0)) return -1; 
+	if ((channel >= _pinNo) || (channel < 0)) return -1; 
 	
 	int adcvalue = 0;
-	uint8_t cmd = 0xB0; //command bits - start, mode, chn (3), dont care (3)
+	uint8_t cmd = B11000000; //command bits - start, mode, chn (3), dont care (3)
 
 	// allow channel selection
-	cmd|=((channel-1)<<3);
+	cmd|=((channel)<<3);
 
 	digitalWrite(_cspin, LOW); //Select adc
 	// setup bits to be written

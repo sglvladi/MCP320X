@@ -19,7 +19,7 @@ class MCP320X
 	public:
 		MCP320X(uint8_t model, uint8_t clockpin, uint8_t mosipin, uint8_t misopin, uint8_t cspin);
 		~MCP320X();
-		uint16_t readChannel(uint8_t ch);
+		int16_t readADC(uint8_t ch);
 		
 	private:
 		  uint8_t _pinNo, _clockpin, _mosipin, _misopin, _cspin;
