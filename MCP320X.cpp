@@ -11,7 +11,7 @@
 *	Constructor function.
 *	Parameters:
 *		* model: 	The 'X' part of the model identifier (i.e. MCP3204 -> model=4)
-*		* clockpin: The SPI clock pin (CSK) of your choise.
+*		* clockpin: 	The SPI clock pin (CSK) of your choise.
 *		* mosipin:	The SPI MOSI pin of your choice.
 *		* misopin:	The SPI MISO pin of your choice.
 *		* cspin:	The SPI CS pin of your choice.
