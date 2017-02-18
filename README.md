@@ -1,5 +1,5 @@
 # MCP320X Arduino library
-Arduino library to interface with MCP320X family 12-bit Analogue to Digital Converter chips.<br>
+Arduino library to interface with MCP320X family (MCP3201, MCP3202, MCP3204 and MCP3208) 12-bit Analogue-to-Digital Converter chips.<br>
 Put together by Lyudmil Vladimirov, Feb 2017
 
 Inspired by the Arduino Playground MCP3208 example. (http://playground.arduino.cc/Code/MCP3208)  
@@ -22,6 +22,8 @@ MCP320X mcp3204 = MCP320X(MCP3204, CLOCK_PIN, MOSI_PIN, MISO_PIN, CS_PIN);
 ````c++
 int adc = mcp3204.readADC(0); // Read from channel 0
 ````
+The output should be a number from 0 to 4095, proportional to the range GND to VREF.<br>
+If -1 is received instead, it means you have either specified the wrong model number, or an invalid channel for the given model.
 
 ## Compatible devices
-The library has only been tested on a ESP8266 chip (WeMos D1 mini), however should work with any Arduino compatible device.
+The library has only been tested on an ESP8266 chip (WeMos D1 mini) with a MCP3204, however should work with all MCP320X models and on any Arduino compatible device.
