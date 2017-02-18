@@ -26,8 +26,4 @@ The output should be a number from 0 to 4095, proportional to the range GND to V
 If -1 is received instead, it means you have either specified the wrong model number, or an invalid channel for the given model.
 
 ## Compatible devices
-<<<<<<< HEAD
 The library has only been tested on an ESP8266 chip (WeMos D1 mini) with a MCP3204, however should work with all MCP320X models and on any Arduino compatible device.
-=======
-The library has only been tested on an ESP8266 chip (WeMos D1 mini) with a MCP3204, however should work with all MCP320X models and on any Arduino compatible device.
->>>>>>> a197d018390637f597d373a33bb785334f841ecf
