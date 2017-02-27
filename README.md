@@ -2,7 +2,10 @@
 Arduino library to interface with MCP320X family (MCP3204 and MCP3208) 12-bit Analogue-to-Digital Converter chips (check  datasheet [here](http://ww1.microchip.com/downloads/en/DeviceDoc/21298D.pdf "MCP320X datasheet")).<br>
 Put together by Lyudmil Vladimirov, Feb 2017
 
-Inspired by the Arduino Playground MCP3208 example. (http://playground.arduino.cc/Code/MCP3208)  
+Inspired by the Arduino Playground MCP3208 example. (http://playground.arduino.cc/Code/MCP3208) 
+
+## Functionality
+In it's current version, the library only supports Single-ended measurements.
 
 ## Using the MCP320X library
 * (Optional) Define model and SPI pins
@@ -27,3 +30,6 @@ If -1 is received instead, it means you have either specified the wrong model nu
 
 ## Compatible devices
 The library has only been tested on an ESP8266 chip (WeMos D1 mini) with a MCP3204, however should work with both MCP3204/8 and on any Arduino compatible device.
+
+## Open for contributions
+Contributions to the library are more than welcome! 
